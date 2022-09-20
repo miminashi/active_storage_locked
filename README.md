@@ -15,6 +15,7 @@ SQLite3::BusyException: database is locked (ActiveRecord::StatementInvalid)
 
 - このレポジトリをclone
 - `rails db:migrate`
+- `rails s`
 - http://localhost:3000/ をひらく
 - 4個以上エントリを作成する（必ず画像を添付する）
 - `rails c`
