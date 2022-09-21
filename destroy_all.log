@@ -1,0 +1,188 @@
+irb(main):013:0> User.destroy_all
+  User Load (0.2ms)  SELECT "users".* FROM "users"
+  TRANSACTION (0.1ms)  begin transaction
+  ActiveStorage::Attachment Load (0.2ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ActiveStorage::Attachment Destroy (0.4ms)  DELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?  [["id", 1]]
+  User Destroy (0.1ms)  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 1]]
+  TRANSACTION (3.6ms)  commit transaction
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+Enqueued ActiveStorage::PurgeJob (Job ID: 91bfea4b-0bce-40cc-9b0c-9f36f3c11630) to Async(default) with arguments: #<GlobalID:0x00007fde90a8d7b8 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/1>>
+  TRANSACTION (0.0ms)  begin transaction
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ActiveStorage::Attachment Destroy (0.2ms)  DELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?  [["id", 2]]
+  User Destroy (0.1ms)  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 2]]
+  TRANSACTION (3.2ms)  commit transaction
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+Enqueued ActiveStorage::PurgeJob (Job ID: a36ae680-9270-4bd1-8287-47fbea7c4af0) to Async(default) with arguments: #<GlobalID:0x00007fde90a64700 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/2>>
+  TRANSACTION (0.0ms)  begin transaction
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 3], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ActiveStorage::Attachment Destroy (0.2ms)  DELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?  [["id", 3]]
+  User Destroy (0.1ms)  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 3]]
+  TRANSACTION (3.2ms)  commit transaction
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 3], ["LIMIT", 1]]
+Enqueued ActiveStorage::PurgeJob (Job ID: 2334d8eb-47a0-44e0-9222-8877172ffb46) to Async(default) with arguments: #<GlobalID:0x00007fde90a3c660 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/3>>
+  TRANSACTION (0.0ms)  begin transaction
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ActiveStorage::Attachment Destroy (0.2ms)  DELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?  [["id", 4]]
+  User Destroy (0.1ms)  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 4]]
+  TRANSACTION (3.0ms)  commit transaction
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 2], ["LIMIT", 1]]
+Performing ActiveStorage::PurgeJob (Job ID: a36ae680-9270-4bd1-8287-47fbea7c4af0) from Async(default) enqueued at 2022-09-21T13:03:43Z with arguments: #<GlobalID:0x00007fde90a2a168 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/2>>
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 4], ["LIMIT", 1]]
+Performing ActiveStorage::PurgeJob (Job ID: 91bfea4b-0bce-40cc-9b0c-9f36f3c11630) from Async(default) enqueued at 2022-09-21T13:03:43Z with arguments: #<GlobalID:0x00007fde922f0260 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/1>>
+Enqueued ActiveStorage::PurgeJob (Job ID: 16bb1566-9b0d-4205-bd9b-925fc7d880cf) to Async(default) with arguments: #<GlobalID:0x00007fde9236e520 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/4>>
+  TRANSACTION (0.0ms)  begin transaction
+  ActiveStorage::Attachment Load (0.2ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ActiveStorage::Attachment Destroy (0.2ms)  DELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?  [["id", 5]]
+  User Destroy (0.1ms)  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 5]]
+  TRANSACTION (3.4ms)  commit transaction
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 5], ["LIMIT", 1]]
+Enqueued ActiveStorage::PurgeJob (Job ID: 2103cf25-1424-4620-a40c-47ff0abad46a) to Async(default) with arguments: #<GlobalID:0x00007fde912b76f0 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/5>>
+  TRANSACTION (0.0ms)  begin transaction
+  TRANSACTION (0.1ms)  begin transaction
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  TRANSACTION (0.0ms)  begin transaction
+  ActiveStorage::Attachment Exists? (0.1ms)  SELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?  [["blob_id", 2], ["LIMIT", 1]]
+  ActiveStorage::Attachment Exists? (0.1ms)  SELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?  [["blob_id", 1], ["LIMIT", 1]]
+  ActiveStorage::Attachment Destroy (0.2ms)  DELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?  [["id", 6]]
+  User Destroy (0.1ms)  DELETE FROM "users" WHERE "users"."id" = ?  [["id", 6]]
+  TRANSACTION (5010.1ms)  commit transaction
+  TRANSACTION (1.2ms)  rollback transaction
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sqlite3-1.5.0-x86_64-linux/lib/sqlite3/resultset.rb:170:in `step': SQLite3::BusyException: database is locked (ActiveRecord::StatementInvalid)
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sqlite3-1.5.0-x86_64-linux/lib/sqlite3/resultset.rb:170:in `step': database is locked (SQLite3::BusyException)
+irb(main):014:0>   ActiveStorage::VariantRecord Load (0.1ms)  SELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ?  [["blob_id", 2]]
+  ActiveStorage::VariantRecord Load (0.1ms)  SELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ?  [["blob_id", 1]]
+  ActiveStorage::Attachment Load (0.2ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  ActiveStorage::Blob Destroy (0.3ms)  DELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?  [["id", 2]]
+  ActiveStorage::Blob Destroy (0.5ms)  DELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?  [["id", 1]]
+  TRANSACTION (0.1ms)  rollback transaction
+  TRANSACTION (3.4ms)  commit transaction
+Error performing ActiveStorage::PurgeJob (Job ID: 91bfea4b-0bce-40cc-9b0c-9f36f3c11630) from Async(default) in 5082.33ms: ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sqlite3-1.5.0-x86_64-linux/lib/sqlite3/statement.rb:108:in `step'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sqlite3-1.5.0-x86_64-linux/lib/sqlite3/statement.rb:108:in `block in each'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sqlite3-1.5.0-x86_64-linux/lib/sqlite3/statement.rb:107:in `loop'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/sqlite3-1.5.0-x86_64-linux/lib/sqlite3/statement.rb:107:in `each'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/sqlite3/database_statements.rb:56:in `to_a'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/sqlite3/database_statements.rb:56:in `block (2 levels) in exec_query'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/sqlite3/database_statements.rb:47:in `block in exec_query'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:765:in `block in log'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract_adapter.rb:756:in `log'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/sqlite3/database_statements.rb:46:in `exec_query'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/sqlite3/database_statements.rb:74:in `exec_delete'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:181:in `delete'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:22:in `delete'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/persistence.rb:529:in `_delete_record'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/persistence.rb:1044:in `_delete_row'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/persistence.rb:1040:in `destroy_row'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/counter_cache.rb:176:in `destroy_row'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/locking/optimistic.rb:121:in `destroy_row'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/persistence.rb:680:in `destroy'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/callbacks.rb:439:in `block in destroy'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:107:in `run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:929:in `_run_destroy_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/callbacks.rb:439:in `destroy'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/transactions.rb:294:in `block in destroy'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/transactions.rb:354:in `block in with_transaction_returning_status'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:319:in `block in within_new_transaction'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract/transaction.rb:317:in `within_new_transaction'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/abstract/database_statements.rb:316:in `transaction'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/transactions.rb:350:in `with_transaction_returning_status'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activerecord-7.0.4/lib/active_record/transactions.rb:294:in `destroy'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activestorage-7.0.4/app/models/active_storage/blob.rb:327:in `purge'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activestorage-7.0.4/app/jobs/active_storage/purge_job.rb:11:in `perform'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/ubuntu/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+  Disk Storage (0.8ms) Deleted file from key: qxbrzo1th5x6wkarfk4gnrs3h0x4
+  Disk Storage (0.1ms) Deleted files by key prefix: variants/qxbrzo1th5x6wkarfk4gnrs3h0x4/
+Performed ActiveStorage::PurgeJob (Job ID: a36ae680-9270-4bd1-8287-47fbea7c4af0) from Async(default) in 5088.88ms
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 3], ["LIMIT", 1]]
+Performing ActiveStorage::PurgeJob (Job ID: 2334d8eb-47a0-44e0-9222-8877172ffb46) from Async(default) enqueued at 2022-09-21T13:03:43Z with arguments: #<GlobalID:0x00007fde90bfa290 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/3>>
+  TRANSACTION (0.1ms)  begin transaction
+  ActiveStorage::Attachment Exists? (0.1ms)  SELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?  [["blob_id", 3], ["LIMIT", 1]]
+  ActiveStorage::VariantRecord Load (0.1ms)  SELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ?  [["blob_id", 3]]
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 4], ["LIMIT", 1]]
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 3], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  ActiveStorage::Blob Destroy (0.2ms)  DELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?  [["id", 3]]
+Performing ActiveStorage::PurgeJob (Job ID: 16bb1566-9b0d-4205-bd9b-925fc7d880cf) from Async(default) enqueued at 2022-09-21T13:03:43Z with arguments: #<GlobalID:0x00007fde90c22e70 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/4>>
+  TRANSACTION (2.8ms)  commit transaction
+  TRANSACTION (0.1ms)  begin transaction
+  Disk Storage (1.0ms) Deleted file from key: 5o66w79o6lc1vdf5u0vzc5mjpidx
+  ActiveStorage::Attachment Exists? (0.1ms)  SELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?  [["blob_id", 4], ["LIMIT", 1]]
+  Disk Storage (0.2ms) Deleted files by key prefix: variants/5o66w79o6lc1vdf5u0vzc5mjpidx/
+  ActiveStorage::VariantRecord Load (0.1ms)  SELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ?  [["blob_id", 4]]
+Performed ActiveStorage::PurgeJob (Job ID: 2334d8eb-47a0-44e0-9222-8877172ffb46) from Async(default) in 13.99ms
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  ActiveStorage::Blob Destroy (0.2ms)  DELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?  [["id", 4]]
+  TRANSACTION (2.3ms)  commit transaction
+  Disk Storage (0.1ms) Deleted file from key: jbsh70j2uh84fuidzgvsmay34zvh
+  Disk Storage (0.1ms) Deleted files by key prefix: variants/jbsh70j2uh84fuidzgvsmay34zvh/
+Performed ActiveStorage::PurgeJob (Job ID: 16bb1566-9b0d-4205-bd9b-925fc7d880cf) from Async(default) in 15.73ms
+  ActiveStorage::Blob Load (0.1ms)  SELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?  [["id", 5], ["LIMIT", 1]]
+Performing ActiveStorage::PurgeJob (Job ID: 2103cf25-1424-4620-a40c-47ff0abad46a) from Async(default) enqueued at 2022-09-21T13:03:43Z with arguments: #<GlobalID:0x00007fde90be5818 @uri=#<URI::GID gid://activestorage-investigate/ActiveStorage::Blob/5>>
+  TRANSACTION (0.0ms)  begin transaction
+  ActiveStorage::Attachment Exists? (0.1ms)  SELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?  [["blob_id", 5], ["LIMIT", 1]]
+  ActiveStorage::VariantRecord Load (0.1ms)  SELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ?  [["blob_id", 5]]
+  ActiveStorage::Attachment Load (0.1ms)  SELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?  [["record_id", 5], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+  ActiveStorage::Blob Destroy (0.2ms)  DELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?  [["id", 5]]
+  TRANSACTION (2.9ms)  commit transaction
+  Disk Storage (0.1ms) Deleted file from key: custskth3t74umnp2wkikkpx1eau
+  Disk Storage (0.1ms) Deleted files by key prefix: variants/custskth3t74umnp2wkikkpx1eau/
+Performed ActiveStorage::PurgeJob (Job ID: 2103cf25-1424-4620-a40c-47ff0abad46a) from Async(default) in 9.26ms
+irb(main):014:0>
